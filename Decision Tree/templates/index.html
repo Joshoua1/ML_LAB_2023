@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .prediction {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .positive {
+            background-color: #d4edda; /* Light green */
+            color: #155724; /* Dark green */
+        }
+        .negative {
+            background-color: #f8d7da; /* Light red */
+            color: #721c24; /* Dark red */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Diabetes Prediction Model</h1>
+        
+        <form action="/predict" method="post" id="predictionForm">
+            <div class="form-group">
+                <label for="pregnancies">Number of Pregnancies:</label>
+                <input type="number" class="form-control" id="pregnancies" name="pregnancies" required>
+            </div>
+
+            <div class="form-group">
+                <label for="glucose">Glucose Level:</label>
+                <input type="number" class="form-control" id="glucose" name="glucose" required>
+            </div>
+
+            <div class="form-group">
+                <label for="blood_pressure">Blood Pressure:</label>
+                <input type="number" class="form-control" id="blood_pressure" name="blood_pressure" required>
+            </div>
+
+            <div class="form-group">
+                <label for="skin_thickness">Skin Thickness:</label>
+                <input type="number" class="form-control" id="skin_thickness" name="skin_thickness" required>
+            </div>
+
+            <div class="form-group">
+                <label for="insulin">Insulin Level:</label>
+                <input type="number" class="form-control" id="insulin" name="insulin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" step=".01" class="form-control" id="bmi" name="bmi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="diabetes_pedigree_function">Diabetes Pedigree Function:</label>
+                <input type="number" step=".01" class="form-control" id="diabetes_pedigree_function" name="diabetes_pedigree_function" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="{{ 'prediction ' + ('positive' if prediction == 'Based on the input, it is predicted that you have diabetes.' else 'negative') }}">
+                {{ prediction }}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.getElementById('predictionForm').onsubmit = function() {
+            // You can add any additional validation here if needed
+        };
+    </script>
+</body>
+</html>
