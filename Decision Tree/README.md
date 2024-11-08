@@ -31,8 +31,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/diabetes-prediction-app.git
-   cd diabetes-prediction-app
+   git clone https://github.com/Joshoua1/ML_LAB_2023.git
+   cd Decision Tree
    ```
    
 2. **Install required packages**:
