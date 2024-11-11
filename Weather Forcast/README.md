@@ -27,10 +27,9 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/yourusername/weather-forecast-prediction.git
-   ```
+```bash
+git clone https://github.com/yourusername/weather-forecast-prediction.git
+```
 
 2. Navigate to the project directory:
 ```bash
