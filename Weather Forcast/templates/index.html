@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Weather Forecast Prediction</h1>
+    
+   <form id="weatherForm" action="/predict" method="post">
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" name="temperature" required><br>
+
+        <label for="humidity">Humidity:</label>
+        <input type="text" id="humidity" name="humidity" required><br>
+
+        <label for="wind_speed">Wind Speed:</label>
+        <input type="text" id="wind_speed" name="wind_speed" required><br>
+
+        <label for="cloud_cover">Cloud Cover:</label>
+        <input type="text" id="cloud_cover" name="cloud_cover" required><br>
+
+        <label for="pressure">Pressure:</label>
+        <input type="text" id="pressure" name="pressure" required><br>
+
+        <input type="submit" value="Predict">
+   </form>
+
+   <div id="result"></div>
+
+   <script>
+       document.getElementById('weatherForm').onsubmit = function(event) {
+           event.preventDefault(); // Prevent form submission
+ 
+           const formData = new FormData(this);
+           const data = {};
+           formData.forEach((value, key) => { data[key] = value });
+ 
+           fetch('/predict', {
+               method: 'POST',
+               headers: {
+                   'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data)  // Send the data as JSON
+           })
+           .then(response => response.json())
+           .then(data => {
+               document.getElementById('result').innerHTML = `<h2>Prediction: ${data.prediction}</h2>`;
+               
+           })
+           .catch(error => console.error('Error:', error));
+       };
+   </script>
+
+</body>
+</html>

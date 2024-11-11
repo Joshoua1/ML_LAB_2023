@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 30px;
+    font-size: 2.5em; /* Larger font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+form {
+    max-width: 400px;
+    width: 100%; /* Make form responsive */
+    padding: 20px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin for better spacing */
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px; /* Increased padding for better touch targets */
+    margin-bottom: 15px;
+    border-radius: 6px; /* More rounded corners */
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Focus effect with shadow */
+}
+
+input[type="submit"] {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px; /* Increased padding for better touch targets */
+    border: none;
+    border-radius: 6px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+input[type="submit"]:hover {
+    background-color: #357ab8;
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+    color: #d9534f; /* Bootstrap danger color */
+}
+
+@media (max-width: 480px) {
+   form {
+        width: calc(100% - 40px);
+        padding: 15px; 
+        box-shadow: none; /* Remove shadow on small screens */
+        border-radius: 8px; /* Slightly rounded corners for mobile */
+        background-color: rgba(255,255,255,0.95); /* Slightly transparent white for mobile */
+   }
+}   
