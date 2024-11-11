@@ -28,8 +28,9 @@ Before you begin, ensure you have the following installed:
 
 1. Clone this repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/weather-forecast-prediction.git
+git clone git@github.com:Joshoua1/ML_LAB_2023.git
 ```
+Use the Weather forcast folder
 
 2. Navigate to the project directory:
 ```bash
