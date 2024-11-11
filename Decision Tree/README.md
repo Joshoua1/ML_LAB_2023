@@ -31,8 +31,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/diabetes-prediction-app.git
-   cd diabetes-prediction-app
+   git clone https://github.com/Joshoua1/ML_LAB_2023.git
+   cd Decision Tree
    ```
    
 2. **Install required packages**:
@@ -109,3 +109,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 3. Adjust any sections as necessary based on your specific implementation details or additional features you may have added.
 
 This README provides a comprehensive overview of your project, making it easier for others (or yourself in the future) to understand how to set up and use your diabetes prediction web application!
+
+![image](https://github.com/user-attachments/assets/5435b306-a536-40bf-9e97-9435d53d264e)
+
