@@ -65,8 +65,6 @@ text
     ├── weather_forecast_data.csv  # Dataset for training the model
     ├── /static                    # Directory for static files (CSS, images)
     │   ├── styles.css             # CSS styles for the application
-    │   ├── rain.jpg               # Image for rain prediction
-    │   └── no_rain.jpg            # Image for no rain prediction
     └── /templates                 # Directory for HTML templates
         └── index.html             # Main HTML file for the application
 ```
